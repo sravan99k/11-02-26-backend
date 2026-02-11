@@ -1,4 +1,4 @@
 export interface IWellnessRepository {
-    saveMood(studentId: string, moodData: any): Promise<void>;
-    getMoodHistory(studentId: string): Promise<any[]>;
+    saveMood(studentId: string, tenant: any, moodData: any): Promise<void>;
+    getMoodHistory(studentId: string, tenant: any): Promise<any[]>;
 }

@@ -2,11 +2,13 @@ import { ITenantContextService, TenantInfo } from "../../application/services/IT
 
 export class FirestoreTenantContextService implements ITenantContextService {
     resolvePath(tenant: TenantInfo, subPath: string): string {
-        const basePath = tenant.isIndependent
-            ? `users/${tenant.adminId}/schools/${tenant.schoolId}`
-            : `users/${tenant.adminId}/organizations/${tenant.organizationId}/schools/${tenant.schoolId}`;
+        // Handle independent schools (no organization)
+        if (tenant.isIndependent || !tenant.organizationId) {
+            return `schools/${tenant.schoolId}/${subPath}`;
+        }
 
-        return `${basePath}/${subPath}`.replace(/\/+$/, ''); // Ensure no trailing slash
+        // Handle organization-based schools
+        return `organizations/${tenant.organizationId}/schools/${tenant.schoolId}/${subPath}`;
     }
 
     // Add helper to create path for students, assessments, etc.
@@ -15,6 +17,27 @@ export class FirestoreTenantContextService implements ITenantContextService {
     }
 
     getAssessmentsPath(tenant: TenantInfo): string {
-        return this.resolvePath(tenant, 'assessment_assignments');
+        return this.resolvePath(tenant, 'assessments');
+    }
+
+    getWellnessPath(tenant: TenantInfo): string {
+        return this.resolvePath(tenant, 'wellness');
+    }
+
+    getAnalyticsPath(tenant: TenantInfo): string {
+        return this.resolvePath(tenant, 'analytics');
+    }
+
+    getChatPath(tenant: TenantInfo): string {
+        return this.resolvePath(tenant, 'chat');
+    }
+
+    getNotificationsPath(tenant: TenantInfo): string {
+        return this.resolvePath(tenant, 'notifications');
+    }
+
+    // Super Admin platform-level access (bypasses tenant isolation)
+    getPlatformPath(subPath: string): string {
+        return `platform/${subPath}`;
     }
 }

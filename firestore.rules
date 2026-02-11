@@ -68,7 +68,7 @@ service cloud.firestore {
       allow read, write: if isSuperAdmin();
       
       // Org admins can access their organization
-      allow read, write: if isOrgAdmin() && belongsToOrganization(organizationId);
+      allow read, write: if isOrgAdmin() && userOrganizationId() == organizationId;
       
       // School admins can read their organization
       allow read: if isSchoolAdmin() && belongsToOrganization(organizationId);
@@ -78,117 +78,75 @@ service cloud.firestore {
     }
     
     // SCHOOLS COLLECTION
-    match /schools/{schoolId} {
+    match /organizations/{organizationId}/schools/{schoolId} {
       // Super admins can access all schools
       allow read, write: if isSuperAdmin();
       
       // Org admins can access schools in their organization
-      allow read, write: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
+      allow read, write: if isOrgAdmin() && belongsToOrganization(organizationId);
       
       // School admins can access their school
-      allow read, write: if isSchoolAdmin() && belongsToSchool(schoolId) && belongsToOrganization(resource.data.organizationId);
+      allow read, write: if isSchoolAdmin() && userSchoolId() == schoolId;
       
       // Teachers and students can read their school
-      allow read: if (isTeacher() || isStudent()) && belongsToSchool(schoolId) && belongsToOrganization(resource.data.organizationId);
+      allow read: if (isTeacher() || isStudent()) && userSchoolId() == schoolId;
     }
     
-    // ASSESSMENTS COLLECTION - STRICT TENANT ISOLATION
-    match /assessments/{assessmentId} {
-      // Super admins can access all assessments
+    // TENANT-ISOLATED COLLECTIONS
+    match /organizations/{organizationId}/schools/{schoolId}/{document=**} {
+      // Super admins can access all tenant data
       allow read, write: if isSuperAdmin();
       
-      // Org admins can access assessments in their organization
-      allow read, write: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
+      // Org admins can access data in their organization
+      allow read, write: if isOrgAdmin() && belongsToOrganization(organizationId);
       
-      // School admins can access assessments in their school
-      allow read, write: if isSchoolAdmin() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
+      // School admins can access data in their school
+      allow read, write: if isSchoolAdmin() && belongsToSchool(schoolId) && belongsToOrganization(organizationId);
       
-      // Teachers can access assessments in their school
-      allow read, write: if isTeacher() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Students can only read their own assessments
-      allow read: if isStudent() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId) && resource.data.studentId == request.auth.uid;
+      // Teachers and students can access data in their school
+      allow read, write: if (isTeacher() || isStudent()) && belongsToSchool(schoolId) && belongsToOrganization(organizationId);
     }
     
-    // WELLNESS JOURNALS COLLECTION - STRICT TENANT ISOLATION
-    match /wellnessJournals/{journalId} {
-      // Super admins can access all journals
+    // INDEPENDENT SCHOOLS (NO ORGANIZATION)
+    match /schools/{schoolId}/{document=**} {
+      // Super admins can access all independent schools
       allow read, write: if isSuperAdmin();
       
-      // Org admins can access journals in their organization
-      allow read: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
+      // School admins can access their independent school
+      allow read, write: if isSchoolAdmin() && userSchoolId() == schoolId;
       
-      // School admins can access journals in their school
-      allow read: if isSchoolAdmin() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Teachers can read journals of students in their school
-      allow read: if isTeacher() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Students can access their own journals
-      allow read, write: if isStudent() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId) && resource.data.studentId == request.auth.uid;
+      // Teachers and students can access their independent school
+      allow read, write: if (isTeacher() || isStudent()) && userSchoolId() == schoolId;
     }
     
-    // CHAT MESSAGES COLLECTION - STRICT TENANT ISOLATION
-    match /chatMessages/{messageId} {
-      // Super admins can access all messages
+    // PLATFORM-LEVEL COLLECTIONS (SUPER ADMIN ONLY)
+    match /platform/{document=**} {
       allow read, write: if isSuperAdmin();
-      
-      // Org admins can access messages in their organization
-      allow read: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
-      
-      // School admins can access messages in their school
-      allow read: if isSchoolAdmin() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Teachers can access messages in their school
-      allow read, write: if isTeacher() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Students can access messages in their school
-      allow read, write: if isStudent() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
     }
     
-    // ANALYTICS COLLECTION - STRICT TENANT ISOLATION
-    match /analytics/{analyticsId} {
-      // Super admins can access all analytics
-      allow read, write: if isSuperAdmin();
-      
-      // Org admins can access analytics in their organization
-      allow read, write: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
-      
-      // School admins can access analytics in their school
-      allow read, write: if isSchoolAdmin() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Teachers can read analytics for their school
-      allow read: if isTeacher() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Students can only read their own analytics
-      allow read: if isStudent() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId) && resource.data.studentId == request.auth.uid;
+    // BLOCK ALL ROOT-LEVEL BUSINESS COLLECTIONS
+    match /mood_entries/{doc} {
+      allow read, write: if false;
     }
     
-    // NOTIFICATIONS COLLECTION - STRICT TENANT ISOLATION
-    match /notifications/{notificationId} {
-      // Super admins can access all notifications
-      allow read, write: if isSuperAdmin();
-      
-      // Users can only access their own notifications
-      allow read, write: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    match /assessments/{doc} {
+      allow read, write: if false;
     }
     
-    // FILES COLLECTION - STRICT TENANT ISOLATION
-    match /files/{fileId} {
-      // Super admins can access all files
-      allow read, write: if isSuperAdmin();
-      
-      // Org admins can access files in their organization
-      allow read, write: if isOrgAdmin() && belongsToOrganization(resource.data.organizationId);
-      
-      // School admins can access files in their school
-      allow read, write: if isSchoolAdmin() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Teachers can access files in their school
-      allow read, write: if isTeacher() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
-      
-      // Students can access files in their school
-      allow read: if isStudent() && belongsToSchool(resource.data.schoolId) && belongsToOrganization(resource.data.organizationId);
+    match /chat/{doc} {
+      allow read, write: if false;
+    }
+    
+    match /analytics/{doc} {
+      allow read, write: if false;
+    }
+    
+    match /reports/{doc} {
+      allow read, write: if false;
+    }
+    
+    match /notifications/{doc} {
+      allow read, write: if false;
     }
     
     // DENY ALL OTHER ACCESS

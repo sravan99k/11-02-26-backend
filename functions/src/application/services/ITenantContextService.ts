@@ -1,8 +1,7 @@
 export interface TenantInfo {
-    adminId: string;
-    organizationId?: string;
-    schoolId: string;
-    isIndependent: boolean;
+    organizationId?: string; // Organization ID (optional)
+    schoolId: string;       // School ID (required)
+    isIndependent: boolean;  // True for independent schools
 }
 
 export interface ITenantContextService {
