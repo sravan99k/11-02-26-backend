@@ -1,0 +1,447 @@
+{
+    "metadata": {
+        "grade": 6,
+        "phase": 1,
+        "assessmentCode": "M1",
+        "assessmentName": "The Baseline",
+        "purpose": "Comprehensive screening of the 'New Middle Schooler' to establish baseline for middle-school adjustment",
+        "timing": "June 15",
+        "estimatedTimeMinutes": 12,
+        "totalQuestions": 14,
+        "domainsCovered": [
+            "Strengths",
+            "Academic",
+            "Social",
+            "Mood",
+            "Bullying",
+            "Adult Support",
+            "Protective Factors"
+        ]
+    },
+    "privacyStatement": "Your answers are completely private and safe. This helps us understand how you're feeling so we can support you better. Only trained counselors will see your responses, and only if you need help. You can always choose 'Prefer not to say' for any question. Many students your age feel some of these things, and it's completely normal to need support.",
+    "completionMessage": "Well done! Your honesty helps us understand how to support you better. Remember: Many students your age feel some of these things, and it's completely normal to need time adjusting to new schools. You can always choose 'Prefer not to say' for any question. Here are some helpful resources: [MENTAL HEALTH TIPS LINK]",
+    "questions": [
+        {
+            "id": "G6_P1_M1_Q1",
+            "questionNumber": 1,
+            "section": "Strengths Block",
+            "domain": "Strengths",
+            "subdomain": "Self-Concept",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "culturalNotes": "Core self-worth measure; tracks resilience across all assessments"
+        },
+        {
+            "id": "G6_P1_M1_Q3",
+            "questionNumber": 3,
+            "section": "Academic Domain",
+            "domain": "Academic",
+            "subdomain": "Academic Adjustment",
+            "question": "How easy or difficult is your schoolwork in Grade 6 so far?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "difficulty",
+                "scale": [
+                    "Very Easy",
+                    "Easy",
+                    "Moderate",
+                    "Difficult",
+                    "Very Difficult"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Grade 6 marks transition to middle school with multiple teachers"
+        },
+        {
+            "id": "G6_P1_M1_Q4",
+            "questionNumber": 4,
+            "section": "Academic Domain",
+            "domain": "Academic",
+            "subdomain": "Academic Anxiety",
+            "question": "I feel scared to ask questions in class because others might laugh.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Common fear in Indian classrooms; peer judgment concern"
+        },
+        {
+            "id": "G6_P1_M1_Q5",
+            "questionNumber": 5,
+            "section": "Social and Peer Domain",
+            "domain": "Social",
+            "subdomain": "Peer Connection",
+            "question": "Do you have at least one friend in class you can talk to?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A5",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Peer support stability measure; tracks social connection"
+        },
+        {
+            "id": "G6_P1_M1_Q6",
+            "questionNumber": 6,
+            "section": "Social and Peer Domain",
+            "domain": "Social",
+            "subdomain": "Social Inclusion",
+            "question": "At lunch or during break, I usually have someone to sit or play with.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Uses lunch break, playground terms (not cafeteria); culturally appropriate"
+        },
+        {
+            "id": "G6_P1_M1_Q7",
+            "questionNumber": 7,
+            "section": "Emotional and Mood Domain",
+            "domain": "Mood",
+            "subdomain": "School Mood",
+            "question": "In the last 2 weeks, how often have you felt happy coming to school?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A2",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Positive emotional baseline for younger students (Grades 6-7 only)"
+        },
+        {
+            "id": "G6_P1_M1_Q8",
+            "questionNumber": 8,
+            "section": "Bullying and Exclusion",
+            "domain": "Bullying",
+            "subdomain": "Bullying Experience",
+            "question": "In the last 2 weeks, has anyone at school made you feel upset, scared or left out on purpose (for example: name-calling, not letting you join, pushing or hitting)?",
+            "responseType": "yesno_detailed",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ],
+                "followUp": {
+                    "condition": "Yes",
+                    "question": "What happened?",
+                    "responseType": "text",
+                    "maxLines": 2
+                }
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": "Yes",
+                "counselorReview": true
+            },
+            "culturalNotes": "Flag for counselor review, not Auto-Red yet; includes examples relevant to Indian schools"
+        },
+        {
+            "id": "G6_P1_M1_Q9",
+            "questionNumber": 9,
+            "section": "Support and Adult",
+            "domain": "Adult Support",
+            "subdomain": "School Support Access",
+            "question": "Is there a teacher or adult at school you feel comfortable talking to if you have a problem?",
+            "responseType": "yes_no_notsure",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "Yes",
+                    "Not sure",
+                    "No"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A6",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": "Not sure",
+                "orange": "No"
+            }
+        }
+    ],
+    "protectiveFactors": [
+        {
+            "id": "M1.S1",
+            "domain": "Future Hope",
+            "question": "I feel hopeful about my future.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: Hope/optimism deficit",
+            "isAnchor": true,
+            "anchorId": "A7"
+        },
+        {
+            "id": "M1.S2",
+            "domain": "Adult Trust",
+            "question": "I have at least one adult I trust completely.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: Adult support gap"
+        },
+        {
+            "id": "M1.S3",
+            "domain": "Self-Regulation",
+            "question": "I can calm myself when I feel stressed.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: Self-regulation difficulty"
+        },
+        {
+            "id": "M1.S4",
+            "domain": "Self-Worth",
+            "question": "I feel proud of myself sometimes.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: Self-esteem issues"
+        },
+        {
+            "id": "M1.S5",
+            "domain": "School Engagement",
+            "question": "There is at least one thing I enjoy about school.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: School engagement deficit"
+        },
+        {
+            "id": "M1.S6",
+            "domain": "Belonging",
+            "question": "I feel like I belong in my class.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "indicator": "Low Score: Social isolation"
+        }
+    ],
+    "culturalAdaptations": {
+        "examples": [
+            "lunch break",
+            "bus/van",
+            "playground"
+        ],
+        "avoid": [
+            "cafeteria"
+        ],
+        "notes": "Mention 'many teachers / more subjects' to acknowledge transition challenge"
+    }
+}

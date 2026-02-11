@@ -1,0 +1,214 @@
+{
+    "metadata": {
+        "grade": 6,
+        "phase": 4,
+        "assessmentCode": "M4",
+        "assessmentName": "Exit Interview",
+        "purpose": "Growth measurement and identity consolidation, reflect on first year of middle school, set goals, check support",
+        "timing": "March 25",
+        "estimatedTimeMinutes": 6,
+        "totalQuestions": 6,
+        "domainsCovered": [
+            "Strengths",
+            "Academic Progress",
+            "Friendships",
+            "Hope",
+            "Family Support",
+            "Voice",
+            "Support Access"
+        ]
+    },
+    "privacyStatement": "Your answers are completely private and safe. This is your chance to reflect on your first year of middle school and share what you've learned about yourself. Thank you for being honest throughout the year - it helps us support you better!",
+    "completionMessage": "Congratulations on completing your first year of middle school! You've grown so much this year. Remember, everything you've learned about yourself and the support you've found will help you continue to grow. Have a great summer!",
+    "questions": [
+        {
+            "id": "G6_P4_M4_Q1",
+            "questionNumber": 1,
+            "section": "Strengths Block",
+            "domain": "Strengths",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1",
+            "isCritical": false,
+            "culturalNotes": "Final anchor measurement for Grade 6 year; compare to M1"
+        },
+        {
+            "id": "G6_P4_M4_Q3",
+            "questionNumber": 3,
+            "section": "Academic",
+            "domain": "Academic",
+            "subdomain": "Academic Progress",
+            "question": "How do you feel about your progress in your subjects so far?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "feeling",
+                "scale": [
+                    "Very positive",
+                    "Positive",
+                    "Neutral",
+                    "Concerned",
+                    "Very concerned"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A4",
+            "culturalNotes": "Academic confidence anchor for end-of-year"
+        },
+        {
+            "id": "G6_P4_M4_Q4",
+            "questionNumber": 4,
+            "section": "Social",
+            "domain": "Social",
+            "subdomain": "Friendships",
+            "question": "How would you describe your friendships this year?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "quality",
+                "scale": [
+                    "Very good",
+                    "Good",
+                    "Okay",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A5",
+            "culturalNotes": "Social connection anchor; reflects on year-long friendships"
+        },
+        {
+            "id": "G6_P4_M4_Q5",
+            "questionNumber": 5,
+            "section": "Hope and Motivation",
+            "domain": "Hope",
+            "question": "How hopeful do you feel about the rest of this school year?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "hopefulness",
+                "scale": [
+                    "Very hopeful",
+                    "Hopeful",
+                    "Somewhat hopeful",
+                    "A little hopeful",
+                    "Not at all hopeful"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A7",
+            "isCritical": false,
+            "culturalNotes": "Hope anchor for Grade 6-7 only; year-end optimism measure"
+        },
+        {
+            "id": "G6_P4_M4_Q6",
+            "questionNumber": 6,
+            "section": "Family Support",
+            "domain": "Family",
+            "subdomain": "Family Support",
+            "question": "How supported do you feel by your family with your schoolwork?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "feeling",
+                "scale": [
+                    "Very much",
+                    "Quite a bit",
+                    "Somewhat",
+                    "A little",
+                    "Not at all"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "note": "Low family support may impact Grade 7 transition"
+            }
+        },
+        {
+            "id": "G6_P4_M4_Q9",
+            "questionNumber": 9,
+            "section": "Support Access",
+            "domain": "Support",
+            "subdomain": "Support Access",
+            "question": "Do you know who to talk to if you need help at school?",
+            "responseType": "yesno",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A6",
+            "flagConditions": {
+                "yellow": "Yes",
+                "note": "Student may not have identified supportive adult"
+            },
+            "culturalNotes": "Help-seeking access measure; critical for Grade 7 transition"
+        }
+    ],
+    "yearEndReflection": {
+        "note": "M4 is a reflective, growth-focused assessment. Focus on positive reinforcement, identity consolidation, and forward-looking optimism.",
+        "compareToM1": [
+            "Compare A1 (Strength) scores: M1 → M4",
+            "Compare A4 (Academic Confidence) if present in M1",
+            "Compare A5 (Friendships) scores: M1 → M4",
+            "Compare A7 (Hope) scores: M1 → M4",
+            "Overall growth trajectory: Green → maintain; Yellow/Orange → flag for Grade 7 early check-in"
+        ]
+    },
+    "culturalNotes": {
+        "familySupport": "Examples in stem: help with homework / talking kindly about school",
+        "grade6Reflection": "First year of middle school - major transition year, celebrate growth",
+        "grade7Preparation": "M4 flags inform Grade 7 M1 early interventions"
+    }
+}

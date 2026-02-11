@@ -1,0 +1,640 @@
+{
+    "metadata": {
+        "grade": 9,
+        "phase": 2,
+        "assessmentCode": "Mini 2.1",
+        "assessmentName": "Post-Exam Recovery & Wellness Check",
+        "purpose": "Monitor emotional recovery after evaluations AND follow up ALL M2 flagged domains",
+        "timing": "October 15 (2-3 weeks after M2)",
+        "estimatedTimeMinutes": 5,
+        "isAdaptive": true,
+        "adaptiveTrigger": "Students flagged Red/Orange in any domain in M2"
+    },
+    "scenarios": [
+        {
+            "scenarioId": "self_harm_followup",
+            "scenarioName": "Self-Harm Crisis Follow-Up",
+            "triggerCondition": "M2 Q10 = Yes (Self-harm thoughts reported - AUTO RED FLAG)",
+            "improvementThreshold": "If Q1 = No and Q4 shows improvement, immediate crisis may be resolving",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_SH_Q1",
+                    "domain": "Safety",
+                    "question": "In the last week, have you had thoughts of hurting yourself or feeling that life is not worth living?",
+                    "responseType": "yes_no_prefer",
+                    "responseOptions": {
+                        "type": "yesno",
+                        "options": [
+                            "No",
+                            "Prefer not to say",
+                            "Yes"
+                        ],
+                        "values": [
+                            0,
+                            2,
+                            4
+                        ]
+                    },
+                    "isCritical": true,
+                    "autoRedFlag": true,
+                    "flagConditions": {
+                        "red": "Yes",
+                        "action": "AUTO RED FLAG - Immediate counselor escalation",
+                        "protocol": "Level 1: IMMEDIATE DANGER"
+                    },
+                    "compareToM2": "Q10"
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SH_Q2",
+                    "domain": "Safety",
+                    "question": "Did you meet with the school counselor after the last assessment?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    },
+                    "flagConditions": {
+                        "orange": "No",
+                        "note": "If No, intervention protocol was not followed"
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SH_Q3",
+                    "domain": "Support",
+                    "question": "Do you have someone you trust to talk to when you feel overwhelmed?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SH_Q4",
+                    "domain": "Safety",
+                    "question": "Do you feel emotionally safer now than you did during exams?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "safety_feeling",
+                        "scale": [
+                            "Much better",
+                            "Better",
+                            "Same",
+                            "Worse",
+                            "Much worse"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "exam_anxiety_followup",
+            "scenarioName": "Exam Anxiety Follow-Up",
+            "triggerCondition": "M2 Q3 >=3 (Reported forgetting during exams often/always)",
+            "improvementThreshold": "If Q1 or Q2 = Yes, anxiety coping strategies are developing",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_ANX_Q1",
+                    "domain": "Exam Anxiety",
+                    "question": "Have you learned any techniques to manage exam anxiety?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_ANX_Q2",
+                    "domain": "Exam Anxiety",
+                    "question": "Do you feel more prepared for handling future exams?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "confidence",
+                        "scale": [
+                            "Much more prepared",
+                            "More prepared",
+                            "Same",
+                            "Less prepared",
+                            "Much less prepared"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_ANX_Q3",
+                    "domain": "Academic",
+                    "question": "Do you feel anxious when you think about the next set of tests?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "sleep_study_balance",
+            "scenarioName": "Sleep & Study Balance Follow-Up",
+            "triggerCondition": "M2 Q4 >=3 (Reported staying up very late often/always)",
+            "improvementThreshold": "If Q1 or Q2 shows improvement, sleep habits are recovering",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_SLP_Q1",
+                    "domain": "Academic",
+                    "subdomain": "Study Habits",
+                    "question": "Are you getting more regular sleep now that exams are over?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Sometimes",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SLP_Q2",
+                    "domain": "Physical Health",
+                    "question": "How many hours of sleep are you getting per night now?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "hours",
+                        "scale": [
+                            "8+ hours",
+                            "7-8 hours",
+                            "6-7 hours",
+                            "5-6 hours",
+                            "Less than 5 hours"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q4"
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SLP_Q3",
+                    "domain": "Energy",
+                    "question": "Do you feel rested when you wake up?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Always",
+                            "Often",
+                            "Sometimes",
+                            "Rarely",
+                            "Never"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "self_worth_recovery",
+            "scenarioName": "Self-Worth & Confidence Recovery",
+            "triggerCondition": "M2 Q6 >=3 (Felt stupid/not good enough often/always)",
+            "improvementThreshold": "If Q1 or Q2 shows improvement, self-esteem is recovering",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_SW_Q1",
+                    "domain": "Emotional",
+                    "subdomain": "Self-Worth",
+                    "question": "How do you feel about yourself as a student now?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "feeling",
+                        "scale": [
+                            "Very positive",
+                            "Positive",
+                            "Neutral",
+                            "Negative",
+                            "Very negative"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q6"
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SW_Q2",
+                    "domain": "Self",
+                    "question": "I believe I can improve my performance in the next term.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SW_Q3",
+                    "domain": "Social",
+                    "subdomain": "Comparison",
+                    "question": "I feel less pressured to compare myself with others now.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q5"
+                }
+            ]
+        },
+        {
+            "scenarioId": "somatic_symptoms_followup",
+            "scenarioName": "Physical Symptoms Follow-Up",
+            "triggerCondition": "M2 Q7 >=3 (Reported headaches/stomach aches often/always)",
+            "improvementThreshold": "If Q1 or Q2 shows reduction, stress-related symptoms are decreasing",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_SOM_Q1",
+                    "domain": "Somatic",
+                    "subdomain": "Physical Symptoms",
+                    "question": "Are you still getting headaches, stomach aches, or nausea?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q7"
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SOM_Q2",
+                    "domain": "Physical Health",
+                    "question": "Are you eating regular meals now?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Sometimes",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_SOM_Q3",
+                    "domain": "Somatic",
+                    "question": "Do you feel physically better now that exam stress is reduced?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "comparison",
+                        "scale": [
+                            "Much better",
+                            "Better",
+                            "Same",
+                            "Worse",
+                            "Much worse"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "family_pressure_followup",
+            "scenarioName": "Family Pressure & Support Check",
+            "triggerCondition": "M2 Q8 >=3 (Felt scared of parents' anger often/always)",
+            "improvementThreshold": "If Q1 or Q3 shows improvement, family dynamics are stabilizing",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_FAM_Q1",
+                    "domain": "Family",
+                    "subdomain": "Fear of Reaction",
+                    "question": "How did your parents react to your exam results?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "reaction",
+                        "scale": [
+                            "Very supportive",
+                            "Supportive",
+                            "Neutral",
+                            "Disappointed",
+                            "Very angry"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_FAM_Q2",
+                    "domain": "Family",
+                    "question": "Do you feel comfortable talking to your parents about school stress?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Not sure",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_FAM_Q3",
+                    "domain": "Family",
+                    "question": "Do you still feel scared about how your parents will react to future exam results?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q8"
+                }
+            ]
+        },
+        {
+            "scenarioId": "panic_overwhelm_recovery",
+            "scenarioName": "Panic & Overwhelm Recovery",
+            "triggerCondition": "M2 Q9 >=3 (Felt extremely nervous/losing control often/almost always)",
+            "improvementThreshold": "If Q1 or Q2 shows reduction, acute anxiety is subsiding",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_PAN_Q1",
+                    "domain": "Emotional",
+                    "subdomain": "Panic/Overwhelm",
+                    "question": "How often have you felt extremely nervous or like you're losing control in the last 2 weeks?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Almost always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM2": "Q9"
+                },
+                {
+                    "id": "G9_P2_Mini2.1_PAN_Q2",
+                    "domain": "Emotional",
+                    "question": "Do you feel calmer now compared to during exams?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "comparison",
+                        "scale": [
+                            "Much calmer",
+                            "Calmer",
+                            "Same",
+                            "More anxious",
+                            "Much more anxious"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_PAN_Q3",
+                    "domain": "Coping",
+                    "question": "Have you learned any ways to calm yourself when you feel overwhelmed?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "general_stress_check",
+            "scenarioName": "General Stress & Worries Follow-up",
+            "triggerCondition": "M2 indicated ongoing worries",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_GS_Q1",
+                    "domain": "General Stress",
+                    "question": "Are you still feeling worried or stressed?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Not at all",
+                            "A little",
+                            "Somewhat",
+                            "Quite a bit",
+                            "Very much"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "strengths_check",
+            "scenarioName": "Strengths & Self-Concept Follow-up",
+            "triggerCondition": "M2 flagged low self-concept about strengths",
+            "questions": [
+                {
+                    "id": "G9_P2_Mini2.1_STR_Q1",
+                    "domain": "Strengths",
+                    "question": "Can you name at least one thing you're good at?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Not sure",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P2_Mini2.1_STR_Q2",
+                    "domain": "Strengths",
+                    "question": "Have you used any of your strengths recently?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "actionProtocol": {
+        "improved": "Continue current support; encourage continued stress management practices",
+        "noChange": "Brief check-in within 1 week; provide additional coping resources",
+        "worsened": "Counselor follow-up within 3 days; reassess intervention strategy"
+    },
+    "completionMessage": "Recovery check completed. Taking time to process your experiences and rebuild after intense exam periods is essential for long-term well-being and academic success."
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"detectRisk.usecase.js","sourceRoot":"","sources":["../../../../src/modules/assessment/usecases/detectRisk.usecase.ts"],"names":[],"mappings":";;;AAAA,MAAa,iBAAiB;IAC5B,OAAO,CAAC,KAAa,EAAE,MAAc;QAEnC,IAAI,KAAK,GAAG,EAAE;YAAE,OAAO,WAAW,CAAC;QACnC,IAAI,KAAK,GAAG,EAAE;YAAE,OAAO,eAAe,CAAC;QACvC,OAAO,SAAS,CAAC;IACnB,CAAC;CACF;AAPD,8CAOC"}

@@ -1,0 +1,173 @@
+[
+    {
+        "domain": "Strengths / Self-concept",
+        "code": "S-SEL",
+        "recommendations": {
+            "low": "Notice and name strengths in class; give roles that use those strengths (monitor, group leader).",
+            "medium": "Ask, 'What are you proud of this week?' and connect them to small success tasks; use growth-mindset language.",
+            "high": "Student often says 'I am useless / I can't do anything'; share concern with counselor; avoid harsh or public criticism and co-create a small success plan."
+        }
+    },
+    {
+        "domain": "Academic confidence",
+        "code": "A-CON",
+        "recommendations": {
+            "low": "Give challenging work with supportive feedback; use them as peer tutor occasionally.",
+            "medium": "Break tasks into smaller steps; praise effort and strategy, not marks; allow extra clarification time.",
+            "high": "Consistent avoidance, frequent 'I can't'; coordinate with parents and counselor for remedial support and exam accommodations; reduce public performance pressure."
+        }
+    },
+    {
+        "domain": "Peer relationships",
+        "code": "P-REL",
+        "recommendations": {
+            "low": "Keep them in mixed groups; reinforce inclusive behaviour.",
+            "medium": "Notice who they sit/work with; pair with kind peers; teach basic social skills in class (listening, 'I' statements).",
+            "high": "Frequent isolation, rejection, or clinginess; consult counselor; actively monitor group work and seating; avoid forcing public pairings with students who are unkind."
+        }
+    },
+    {
+        "domain": "Adult support (trust in teachers)",
+        "code": "A-SUP",
+        "recommendations": {
+            "low": "Maintain open-door tone ('If you ever need to talk...'); keep promises.",
+            "medium": "Schedule brief 1:1 check-ins; explicitly invite questions; model non-judgmental listening.",
+            "high": "Student reports 'no adult I can trust'; inform counselor/mental-health lead; identify at least one adult and intentionally build that relationship."
+        }
+    },
+    {
+        "domain": "Mood / emotional state",
+        "code": "M-EMO",
+        "recommendations": {
+            "low": "Normal ups and downs; continue warm interactions; mention wellness tools to whole class.",
+            "medium": "Quiet conversation ('You seem low lately – want to share?'); link them to coping resources and mood diary; monitor for 2–3 weeks.",
+            "high": "Persistent sadness, comments about hopelessness, big drop in functioning; inform counselor the same day; avoid statements that minimise feelings."
+        }
+    },
+    {
+        "domain": "Bullying / safety at school",
+        "code": "B-SAF",
+        "recommendations": {
+            "low": "One-off minor conflict; mediate respectfully; reinforce class rules on respect and inclusion.",
+            "medium": "Repeated unkind behaviour; document incidents; separate students when needed; inform parent and counselor; follow school anti-bullying policy.",
+            "high": "Ongoing bullying, threats, or severe humiliation; treat as safety issue; involve principal/counselor immediately; ensure student is supervised and feels safe."
+        }
+    },
+    {
+        "domain": "Home safety",
+        "code": "H-SAF",
+        "recommendations": {
+            "low": "Listen calmly, thank the child for sharing if they mention something minor.",
+            "medium": "If concerns are ambiguous, consult counselor/child-protection lead the same day.",
+            "high": "Follow school child-protection protocol immediately; involve principal and designated officer; avoid sending child home without a plan."
+        }
+    },
+    {
+        "domain": "Self-harm screening",
+        "code": "S-HAR",
+        "recommendations": {
+            "low": "Stay observant; maintain warm connection.",
+            "medium": "Mention wellness resources; monitor closely and inform counselor if signs increase.",
+            "high": "Stay with student; do not leave them alone. Inform counselor/principal immediately; follow crisis protocol; remove academic pressure."
+        }
+    },
+    {
+        "domain": "Sleep / energy",
+        "code": "S-ENE",
+        "recommendations": {
+            "low": "General education to class about sleep; adjust homework load around big exams.",
+            "medium": "Talk privately; ask about routine; suggest sleep and digital-wellness resources; consider flexible deadlines.",
+            "high": "Severe fatigue; refer to counselor and suggest medical review via parents."
+        }
+    },
+    {
+        "domain": "Family support / pressure",
+        "code": "F-SUP",
+        "recommendations": {
+            "low": "In PTMs, praise effort to families; share realistic expectations.",
+            "medium": "Arrange calm parent meeting; explain impact of pressure; encourage supportive language at home.",
+            "high": "Coordinate with counselor to hold structured family meeting; if safety issues exist, follow protection pathway."
+        }
+    },
+    {
+        "domain": "Hope / future orientation",
+        "code": "H-FUT",
+        "recommendations": {
+            "low": "Encourage goal-setting and celebrate small progress.",
+            "medium": "Discuss strengths and options; refer to career guidance or counselor.",
+            "high": "Urgent counselor referral; adjust expectations; increase check-ins."
+        }
+    },
+    {
+        "domain": "Body image",
+        "code": "B-IMG",
+        "recommendations": {
+            "low": "Model non-appearance-based praise; stop appearance-based teasing in class.",
+            "medium": "Gentle conversation; validate feelings; connect to counselor for body-image support.",
+            "high": "Extreme shame or social withdrawal; inform counselor and parents; recommend professional evaluation."
+        }
+    },
+    {
+        "domain": "Digital / technology",
+        "code": "D-TEC",
+        "recommendations": {
+            "low": "Teach digital-wellness and cyberbullying lessons to whole class.",
+            "medium": "Set class rules for phone overuse; talk with parents about phone timing.",
+            "high": "Online harassment or exposure to harmful content; involve counselor and parents; follow cyber-safety policy."
+        }
+    },
+    {
+        "domain": "Peer pressure",
+        "code": "P-PRE",
+        "recommendations": {
+            "low": "Classroom lessons on assertiveness and saying 'no'.",
+            "medium": "Explore pressures in a private talk; rehearse responses; consider shifting groups.",
+            "high": "Peer pressure linked to substance use or sexual risk; immediate referral to counselor; close monitoring."
+        }
+    },
+    {
+        "domain": "Exam stress",
+        "code": "E-STR",
+        "recommendations": {
+            "low": "Normal nervousness; teach study skills and relaxation.",
+            "medium": "Individual check-in; offer structured revision plans; coordinate with parents to lower pressure.",
+            "high": "Panic attacks or refusal to attend; counselor involvement; consider special arrangements (extra time)."
+        }
+    },
+    {
+        "domain": "Identity formation",
+        "code": "I-FOR",
+        "recommendations": {
+            "low": "Offer projects where students explore strengths and values.",
+            "medium": "Listen without judgment; normalise that identity is evolving; link to growth-mindset resources.",
+            "high": "Identity confusion plus bullying or rejection; coordinate with counselor for careful support."
+        }
+    },
+    {
+        "domain": "Stream / career anxiety",
+        "code": "C-ANX",
+        "recommendations": {
+            "low": "Give factual information about options and multiple pathways.",
+            "medium": "Refer to career guidance or counselor; involve parents in realistic planning.",
+            "high": "Career anxiety tied to severe stress; urgent meeting with counselor and parents."
+        }
+    },
+    {
+        "domain": "Burnout",
+        "code": "B-OUT",
+        "recommendations": {
+            "low": "Introduce balanced routines, breaks, movement in class.",
+            "medium": "Talk about workload; help prioritise; encourage use of stress-management resources.",
+            "high": "Refer to counselor; consider timetable adjustments or temporary reduction in demands."
+        }
+    },
+    {
+        "domain": "Somatic symptoms",
+        "code": "S-SYM",
+        "recommendations": {
+            "low": "Accept occasional complaints; check hydration and breaks.",
+            "medium": "Notice patterns; talk kindly; suggest doctor visit; use stress-management tools.",
+            "high": "Persistent complaints tied to anxiety/school refusal; refer to counselor and medical professional."
+        }
+    }
+]

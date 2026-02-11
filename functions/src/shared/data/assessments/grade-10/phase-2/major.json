@@ -1,0 +1,346 @@
+{
+    "metadata": {
+        "grade": 10,
+        "phase": 2,
+        "assessmentCode": "M2",
+        "assessmentName": "Peak Stress Assessment",
+        "purpose": "Evaluate coping effectiveness during peak academic pressure and identify deterioration",
+        "timing": "September 10",
+        "estimatedTimeMinutes": 8,
+        "totalQuestions": 10,
+        "domainsCovered": [
+            "Strengths",
+            "Exam Anxiety",
+            "Late-night Study",
+            "Comparison",
+            "Self-Worth",
+            "Somatic Stress",
+            "Family Reaction",
+            "Emotional Safety",
+            "Self-Harm",
+            "Voice"
+        ]
+    },
+    "questions": [
+        {
+            "id": "G10_P2_M2_Q1",
+            "questionNumber": 1,
+            "domain": "Strengths",
+            "subdomain": "Self-Concept",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q3",
+            "questionNumber": 3,
+            "domain": "Exam Anxiety",
+            "subdomain": "Exam Stress",
+            "question": "When I see the Board-style question paper, I feel very nervous.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q4",
+            "questionNumber": 4,
+            "domain": "Academic",
+            "subdomain": "Recall",
+            "question": "I forget what I studied when I see difficult questions.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q5",
+            "questionNumber": 5,
+            "domain": "Academic",
+            "subdomain": "Late-Night",
+            "question": "I stay up very late (past midnight) to study.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q6",
+            "questionNumber": 6,
+            "domain": "Social",
+            "subdomain": "Comparison",
+            "question": "I constantly compare my marks with my friends' marks.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q7",
+            "questionNumber": 7,
+            "domain": "Emotional",
+            "subdomain": "Self-Worth",
+            "question": "I feel not good enough or like a failure compared to other students.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q8",
+            "domain": "Somatic",
+            "subdomain": "Somatic Stress",
+            "question": "I get headaches, stomach aches, or fast heartbeat when I think about Boards or preboards.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q9",
+            "questionNumber": 9,
+            "domain": "Family",
+            "subdomain": "Fear of Disappointment",
+            "question": "I feel scared that my parents will be very angry or disappointed if I don't get the marks they expect.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q10",
+            "questionNumber": 10,
+            "domain": "Emotional",
+            "subdomain": "Overwhelm",
+            "question": "In the last 2 weeks, how often have you felt that you cannot handle the pressure anymore?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A3",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G10_P2_M2_Q11",
+            "questionNumber": 11,
+            "domain": "Safety",
+            "subdomain": "Self-Harm",
+            "question": "In the last month, have you had thoughts of hurting yourself or ending your life?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Prefer not",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG"
+            }
+        }
+    ],
+    "culturalNotes": {
+        "pressure": "Pre-board period is often higher stress than final boards as it serves as a wake-up call.",
+        "somatic": "Tachycardia (fast heartbeat) and GI distress are common somatic markers of severe academic anxiety in Grade 10."
+    }
+}

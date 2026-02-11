@@ -1,0 +1,322 @@
+{
+    "metadata": {
+        "grade": 10,
+        "phase": 3,
+        "assessmentCode": "M3",
+        "assessmentName": "Crisis Prevention and Final Preparation",
+        "purpose": "Prevent breakdown during final Board exam preparation and identify students needing immediate intervention",
+        "timing": "January 10",
+        "estimatedTimeMinutes": 9,
+        "totalQuestions": 9,
+        "domainsCovered": [
+            "Cognitive Function",
+            "Motivation",
+            "Safety Assessment",
+            "Family Environment",
+            "Sleep and Recovery",
+            "Physical Health",
+            "Self-Confidence",
+            "Social Connection",
+            "Exam Readiness",
+            "Support Mapping"
+        ]
+    },
+    "privacyStatement": "Your safety and well-being are our top priority during these final weeks. These questions help us identify if the pressure is becoming too much. Please answer honestly; we are here to support you.",
+    "questions": [
+        {
+            "id": "G10_P3_M3_Q1",
+            "questionNumber": 1,
+            "domain": "Cognitive Function",
+            "subdomain": "Executive Function",
+            "question": "I feel mentally clear and able to recall information during practice tests and study sessions.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Brain Fog/Cognitive Impairment."
+        },
+        {
+            "id": "G10_P3_M3_Q2",
+            "questionNumber": 2,
+            "domain": "Motivation",
+            "subdomain": "School Engagement",
+            "question": "I still feel motivated to study and prepared to give my best effort in Board exams.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Complete Motivation Loss."
+        },
+        {
+            "id": "G10_P3_M3_Q3",
+            "questionNumber": 3,
+            "domain": "Safety",
+            "subdomain": "Suicide Risk",
+            "question": "I have had thoughts of harming myself or escaping everything due to exam pressure.",
+            "responseType": "yesno",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "IMMEDIATE intervention within 1 hour",
+                "protocol": "CRITICAL Crisis Protocol"
+            }
+        },
+        {
+            "id": "G10_P3_M3_Q4",
+            "questionNumber": 4,
+            "domain": "Family",
+            "subdomain": "Atmosphere",
+            "question": "The atmosphere at home is supportive and not adding to my exam stress.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Low scores indicate Toxic Family Environment."
+        },
+        {
+            "id": "G10_P3_M3_Q5",
+            "questionNumber": 5,
+            "domain": "Sleep",
+            "subdomain": "Sleep Quality",
+            "question": "I am getting adequate sleep (7+ hours) and my body is recovering from study stress.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Severe Sleep Deprivation."
+        },
+        {
+            "id": "G10_P3_M3_Q6",
+            "questionNumber": 6,
+            "domain": "Somatic",
+            "subdomain": "Somatic Stress",
+            "question": "I am not experiencing severe physical symptoms (nausea, headaches, weight loss) due to stress.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Physical Breakdown."
+        },
+        {
+            "id": "G10_P3_M3_Q7",
+            "questionNumber": 7,
+            "domain": "Emotional",
+            "subdomain": "Confidence",
+            "question": "I believe in my ability to perform well and pass the Board examinations.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Complete Confidence Collapse."
+        },
+        {
+            "id": "G10_P3_M3_Q8",
+            "questionNumber": 8,
+            "domain": "Social",
+            "subdomain": "Connection",
+            "question": "I maintain healthy connections with friends and family despite exam pressure.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High scores indicate Complete Social Isolation."
+        },
+        {
+            "id": "G10_P3_M3_Q9",
+            "questionNumber": 9,
+            "domain": "Academic",
+            "subdomain": "Strategy",
+            "question": "I have a clear strategy for managing exam day stress and performing my best.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "Low scores indicate Poor Exam Preparation."
+        }
+    ],
+    "crisisProtocols": {
+        "level1": "If Q3 (Safety) = Yes: IMMEDIATE intervention within 1 hour",
+        "level2": "If Multiple high scores: Enhanced support team activation within 24 hours",
+        "healthCheck": "If Q1 (Cognitive) + Q5 (Sleep) = Both poor: Medical evaluation recommended"
+    }
+}

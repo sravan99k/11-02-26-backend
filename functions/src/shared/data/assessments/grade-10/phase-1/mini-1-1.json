@@ -1,0 +1,621 @@
+{
+    "metadata": {
+        "grade": 10,
+        "phase": 1,
+        "assessmentCode": "Mini 1.1",
+        "assessmentName": "Health, Routine & Early Support Check",
+        "purpose": "Monitor sleep patterns, stress management, family support, and early Board exam anxiety",
+        "timing": "July 20",
+        "estimatedTimeMinutes": 5,
+        "isAdaptive": true
+    },
+    "scenarios": [
+        {
+            "scenarioId": "board_shock_recheck",
+            "scenarioName": "Board Shock Follow-Up",
+            "triggerCondition": "M1 Q2 ≥4 (Board shock - feeling unprepared)",
+            "improvementThreshold": "If Q1 + Q3 improve, early intervention working",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_BS_Q1",
+                    "domain": "Academic",
+                    "question": "I feel more prepared for Board exams now than I did earlier.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q2"
+                },
+                {
+                    "id": "G10_P1_Mini1.1_BS_Q2",
+                    "domain": "Academic",
+                    "question": "I have broken my study goals into smaller, achievable tasks to reduce overwhelm.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Sometimes",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_BS_Q3",
+                    "domain": "Emotional",
+                    "question": "I feel less overwhelmed about Boards than before.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "career_worry_recheck",
+            "scenarioName": "Career Worry Follow-Up",
+            "triggerCondition": "M1 Q3 ≥4 (Career/university worry flagged)",
+            "improvementThreshold": "If Q2 = Yes and Q3 improves, career counseling helping",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_CW_Q1",
+                    "domain": "Career",
+                    "question": "How worried are you about getting into a good college/university?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "stress_level",
+                        "scale": [
+                            "Not worried",
+                            "A little worried",
+                            "Somewhat worried",
+                            "Very worried",
+                            "Extremely worried"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q3",
+                    "flagConditions": {
+                        "yellow": ">=3",
+                        "orange": ">=4"
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_CW_Q2",
+                    "domain": "Support",
+                    "question": "Have you received career/college counseling or guidance?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_CW_Q3",
+                    "domain": "Self",
+                    "question": "I feel confident about my future path after Grade 10.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "time_management_recheck",
+            "scenarioName": "Time Management Follow-Up",
+            "triggerCondition": "M1 Q4 ≥3 (Time management struggles)",
+            "improvementThreshold": "If Q1 + Q2 = Yes, time management improving",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_TM_Q1",
+                    "domain": "Academic",
+                    "question": "I have created a study schedule that I can follow.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_TM_Q2",
+                    "domain": "Academic",
+                    "question": "I am able to balance school work, tuition, and self-study.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Always",
+                            "Often",
+                            "Sometimes",
+                            "Rarely",
+                            "Never"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q4"
+                },
+                {
+                    "id": "G10_P1_Mini1.1_TM_Q3",
+                    "domain": "Health",
+                    "question": "I have time for relaxation and activities I enjoy.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "mood_recheck",
+            "scenarioName": "Mood & Well-Being Follow-Up",
+            "triggerCondition": "M1 Q6 ≥3 (Mood flagged - feeling down/hopeless)",
+            "improvementThreshold": "If Q1 improves and Q3 = Yes, support helping",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_MO_Q1",
+                    "domain": "Emotional",
+                    "question": "In the last 2 weeks, how often have you felt sad or hopeless?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Almost always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q6",
+                    "flagConditions": {
+                        "yellow": ">=3",
+                        "orange": ">=4"
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_MO_Q2",
+                    "domain": "Emotional",
+                    "question": "I have things to look forward to each week.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_MO_Q3",
+                    "domain": "Support",
+                    "question": "I have someone I can talk to when I feel down.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "family_support_check",
+            "scenarioName": "Family Support Assessment",
+            "triggerCondition": "Always check family support for Grade 10 students",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_FS_Q1",
+                    "domain": "Family",
+                    "question": "I have had supportive conversations with my family about managing exam stress.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Sometimes",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_FS_Q2",
+                    "domain": "Family",
+                    "question": "My family's expectations for my Board results feel reasonable.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "flagConditions": {
+                        "yellow": ">=3"
+                    },
+                    "culturalNotes": "Family pressure on Board results is intense in Indian context"
+                }
+            ]
+        },
+        {
+            "scenarioId": "digital_wellbeing_check",
+            "scenarioName": "Digital Well-being Follow-up",
+            "triggerCondition": "M1 flagged digital concerns",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_DIG_Q1",
+                    "domain": "Digital Well-being",
+                    "question": "Is your screen time affecting your well-being?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Not at all",
+                            "A little",
+                            "Somewhat",
+                            "Quite a bit",
+                            "Very much"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_DIG_Q2",
+                    "domain": "Digital Well-being",
+                    "question": "Are you managing to balance online and offline activities?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "general_stress_check",
+            "scenarioName": "General Stress & Worries Follow-up",
+            "triggerCondition": "M1 indicated ongoing worries",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_GS_Q1",
+                    "domain": "General Stress",
+                    "question": "Are you still feeling worried or stressed?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Not at all",
+                            "A little",
+                            "Somewhat",
+                            "Quite a bit",
+                            "Very much"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "mood_check",
+            "scenarioName": "Mood Follow-up",
+            "triggerCondition": "M1 flagged mood concerns",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_MOD_Q1",
+                    "domain": "Mood",
+                    "question": "How has your mood been lately?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "level",
+                        "scale": [
+                            "Very good",
+                            "Good",
+                            "Okay",
+                            "Low",
+                            "Very low"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_MOD_Q2",
+                    "domain": "Mood",
+                    "question": "Do you have things that help lift your mood?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "sleep_check",
+            "scenarioName": "Sleep Pattern Follow-up",
+            "triggerCondition": "M1 flagged sleep concerns",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_SL_Q1",
+                    "domain": "Sleep",
+                    "question": "How well have you been sleeping?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "level",
+                        "scale": [
+                            "Very well",
+                            "Well",
+                            "Okay",
+                            "Badly",
+                            "Very badly"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_SL_Q2",
+                    "domain": "Sleep",
+                    "question": "Are you getting at least 7-8 hours of sleep?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "strengths_check",
+            "scenarioName": "Strengths & Self-Concept Follow-up",
+            "triggerCondition": "M1 flagged low self-concept about strengths",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_STR_Q1",
+                    "domain": "Strengths",
+                    "question": "Can you name at least one thing you're good at?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Not sure",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_STR_Q2",
+                    "domain": "Strengths",
+                    "question": "Have you used any of your strengths recently?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "time_management_followup",
+            "scenarioName": "Time Management Follow-up",
+            "triggerCondition": "M1 flagged in Time Management domain",
+            "questions": [
+                {
+                    "id": "G10_P1_Mini1.1_TIM_Q1",
+                    "domain": "Time Management",
+                    "question": "Do you struggle to balance your studies and other activities?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G10_P1_Mini1.1_TIM_Q2",
+                    "domain": "Time Management",
+                    "question": "Do you feel overwhelmed by everything you need to do?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "culturalNotes": "Grade 10 Board exams are life-defining in Indian education. Early support for sleep, time management, family pressure, and career anxiety is critical."
+}

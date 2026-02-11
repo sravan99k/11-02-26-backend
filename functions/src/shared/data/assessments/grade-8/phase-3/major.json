@@ -1,0 +1,372 @@
+{
+    "metadata": {
+        "grade": 8,
+        "phase": 3,
+        "assessmentCode": "M3",
+        "assessmentName": "Relationships and Self-Identity",
+        "purpose": "Address romantic relationships, body image, social hierarchy, and peer pressure",
+        "timing": "January 10",
+        "estimatedTimeMinutes": 12,
+        "totalQuestions": 11,
+        "domainsCovered": [
+            "Strengths",
+            "Energy",
+            "Motivation",
+            "Academic Engagement",
+            "Peer Connection",
+            "Mood",
+            "Bullying",
+            "Home Safety",
+            "Self-Harm",
+            "Support"
+        ]
+    },
+    "questions": [
+        {
+            "id": "G8_P3_M3_Q1",
+            "questionNumber": 1,
+            "domain": "Strengths",
+            "subdomain": "Self-Concept",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q3",
+            "questionNumber": 3,
+            "domain": "Energy",
+            "subdomain": "Energy Levels",
+            "question": "How energetic have you felt most days recently?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "level",
+                "scale": [
+                    "Very energetic",
+                    "Energetic",
+                    "Okay",
+                    "Tired",
+                    "Very tired"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q4",
+            "questionNumber": 4,
+            "domain": "Motivation",
+            "subdomain": "Self-Regulation",
+            "question": "How motivated do you feel to complete your schoolwork?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "level",
+                "scale": [
+                    "Very motivated",
+                    "Quite a bit",
+                    "Somewhat",
+                    "A little",
+                    "Not at all"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q5",
+            "questionNumber": 5,
+            "domain": "Academic",
+            "subdomain": "Engagement",
+            "question": "How often do you feel bored or uninterited in your classes?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q6",
+            "questionNumber": 6,
+            "domain": "Social",
+            "subdomain": "Connection/Isolation",
+            "question": "How connected do you feel to your classmates?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "level",
+                "scale": [
+                    "Very connected",
+                    "Connected",
+                    "Somewhat connected",
+                    "A little connected",
+                    "Not at all connected"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A5",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q7",
+            "questionNumber": 7,
+            "domain": "Emotional",
+            "subdomain": "Mood",
+            "question": "Overall, how have you been feeling emotionally this term?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "level",
+                "scale": [
+                    "Very good",
+                    "Good",
+                    "Okay",
+                    "Low",
+                    "Very low"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A2",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q8",
+            "questionNumber": 8,
+            "domain": "Bullying",
+            "question": "In this term, have you been bullied or regularly made fun of at school or online?",
+            "responseType": "yesno_detailed",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    4
+                ],
+                "followUp": {
+                    "condition": "Yes",
+                    "question": "What happened?"
+                }
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG - Counselor check-in 1-2 hours",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            },
+            "culturalNotes": "Explicitly mention being beaten, constant shouting, insults, or pressure."
+        },
+        {
+            "id": "G8_P3_M3_Q9",
+            "questionNumber": 9,
+            "domain": "Safety",
+            "subdomain": "Home Safety",
+            "question": "Do you feel safe and respected at home most of the time?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "Yes",
+                    "Prefer not to say",
+                    "No"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "No",
+                "action": "AUTO RED FLAG - Counselor check-in 1-2 hours",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            },
+            "culturalNotes": "Explicitly mention being beaten, constant shouting, insults, or pressure."
+        },
+        {
+            "id": "G8_P3_M3_Q10",
+            "questionNumber": 10,
+            "domain": "Emotional",
+            "subdomain": "Hopelessness Screening",
+            "question": "Sometimes students feel like they cannot cope or want to disappear. In the last 2 weeks, how often have you felt this way?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A3",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q11",
+            "questionNumber": 11,
+            "domain": "Safety",
+            "subdomain": "Self-Harm",
+            "question": "In the last month, have you had thoughts of hurting yourself?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Prefer not to say",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG - Counselor check-in 1-2 hours",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            }
+        },
+        {
+            "id": "G8_P3_M3_Q12",
+            "questionNumber": 12,
+            "domain": "Support",
+            "question": "Is there someone you can talk to when you feel low or stressed?",
+            "responseType": "yes_no_notsure",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "Yes",
+                    "Not sure",
+                    "No"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A6",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": "Not sure"
+            }
+        }
+    ],
+    "culturalNotes": {
+        "homeSafety": "High importance to flag physical abuse/constant hostility in Indian family context.",
+        "adolescence": "Romantic feelings and peer hierarchy become drivers of bullying and self-identity stress."
+    }
+}

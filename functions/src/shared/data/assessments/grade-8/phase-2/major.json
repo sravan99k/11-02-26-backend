@@ -1,0 +1,341 @@
+{
+    "metadata": {
+        "grade": 8,
+        "phase": 2,
+        "assessmentCode": "M2",
+        "assessmentName": "Pre-Exam Stress",
+        "purpose": "Start serious exam-stress, mood, family pressure, and self-harm screening",
+        "timing": "September 10",
+        "estimatedTimeMinutes": 12,
+        "totalQuestions": 10,
+        "domainsCovered": [
+            "Strengths",
+            "Exam Stress",
+            "Sleep",
+            "Family Pressure",
+            "Friendships",
+            "Emotional Overwhelm",
+            "Self-Harm",
+            "Voice"
+        ]
+    },
+    "privacyStatement": "Your answers are completely private. Exam time can be stressful, and we want to help you manage it. Only counselors see your data if a flag is raised.",
+    "questions": [
+        {
+            "id": "G8_P2_M2_Q1",
+            "questionNumber": 1,
+            "domain": "Strengths",
+            "subdomain": "Self-Concept",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q3",
+            "questionNumber": 3,
+            "domain": "Exam Stress",
+            "subdomain": "Exam Stress",
+            "question": "How stressed do you feel about your tests and exams this term?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "level",
+                "scale": [
+                    "Not at all",
+                    "A little",
+                    "Somewhat",
+                    "Quite a bit",
+                    "Very stressed"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q4",
+            "questionNumber": 4,
+            "domain": "Academic",
+            "subdomain": "Recall Confidence",
+            "question": "When you think about exams, how confident do you feel about remembering what you studied?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "confidence",
+                "scale": [
+                    "Very confident",
+                    "Confident",
+                    "Somewhat confident",
+                    "A little confident",
+                    "Not at all confident"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q5",
+            "questionNumber": 5,
+            "domain": "Sleep",
+            "subdomain": "Sleep Quality",
+            "question": "How often do you sleep less than 7 hours on school nights because of schoolwork or phone use?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "JEE/NEET foundation stress often starts here; tuition/coaching impact"
+        },
+        {
+            "id": "G8_P2_M2_Q6",
+            "questionNumber": 6,
+            "domain": "Family",
+            "subdomain": "Pressure/Comparison",
+            "question": "How often do parents or relatives compare your marks with cousins, siblings, or classmates?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            },
+            "culturalNotes": "High impact in Indian family context"
+        },
+        {
+            "id": "G8_P2_M2_Q7",
+            "questionNumber": 7,
+            "domain": "Family",
+            "subdomain": "Expectation Stress",
+            "question": "How does thinking about your family's expectations make you feel?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "stress_impact",
+                "scale": [
+                    "Very relaxed",
+                    "Relaxed",
+                    "Neutral",
+                    "Stressed",
+                    "Very stressed"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q8",
+            "questionNumber": 8,
+            "domain": "Social",
+            "subdomain": "Peer Connection",
+            "question": "Have exams caused any fights or distance between you and your friends?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": false,
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q9",
+            "questionNumber": 9,
+            "domain": "Emotional",
+            "subdomain": "Hopelessness Screening",
+            "question": "In the last 2 weeks, how often have you felt that things are too much and will not get better?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Almost always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A3",
+            "isCritical": false,
+            "autoRedFlag": false,
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q10",
+            "questionNumber": 10,
+            "domain": "Safety",
+            "subdomain": "Self-Harm",
+            "question": "In the last month, have you had thoughts of hurting yourself or wishing you were not alive?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Prefer not to say",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG - Counselor check-in 1-2 hours",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            }
+        },
+        {
+            "id": "G8_P2_M2_Q13",
+            "questionNumber": 13,
+            "domain": "Support",
+            "question": "Would you like to talk to the counselor or a trusted adult about exam stress?",
+            "responseType": "yes_no_notsure",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Not sure",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A6",
+            "isCritical": false,
+            "autoRedFlag": false
+        }
+    ],
+    "culturalNotes": {
+        "pressure": "JEE/NEET foundation stress; tuition/coaching impact; relative comparison",
+        "timing": "Board anxiety starts earlier in competitive schools"
+    }
+}

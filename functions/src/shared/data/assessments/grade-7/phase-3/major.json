@@ -1,0 +1,310 @@
+{
+    "metadata": {
+        "grade": 7,
+        "phase": 3,
+        "assessmentCode": "M3",
+        "assessmentName": "Winter Check & Safety",
+        "purpose": "Mid-year burnout, bullying, and critical safety screening",
+        "timing": "January 10",
+        "estimatedTimeMinutes": 9,
+        "totalQuestions": 11,
+        "domainsCovered": [
+            "Strengths",
+            "Energy",
+            "Motivation",
+            "Social",
+            "Digital Well-being",
+            "Home Safety (Critical)",
+            "Bullying",
+            "Self-Harm (Critical)"
+        ]
+    },
+    "questions": [
+        {
+            "id": "G7_P3_M3_Q1",
+            "questionNumber": 1,
+            "domain": "Strengths",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1"
+        },
+        {
+            "id": "G7_P3_M3_Q2",
+            "questionNumber": 2,
+            "domain": "Energy",
+            "question": "How energetic have you felt lately?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "energy_level",
+                "scale": [
+                    "Very energetic",
+                    "Energetic",
+                    "Okay",
+                    "Tired",
+                    "Very tired"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q3",
+            "questionNumber": 3,
+            "domain": "Motivation",
+            "question": "How motivated have you felt to do your schoolwork?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "motivation",
+                "scale": [
+                    "Very motivated",
+                    "Motivated",
+                    "Somewhat motivated",
+                    "A little motivated",
+                    "Not at all motivated"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q4",
+            "questionNumber": 4,
+            "domain": "Social",
+            "question": "How connected do you feel to your friends?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "connection",
+                "scale": [
+                    "Very connected",
+                    "Quite a bit",
+                    "Somewhat",
+                    "A little",
+                    "Not at all"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A5"
+        },
+        {
+            "id": "G7_P3_M3_Q5",
+            "questionNumber": 5,
+            "domain": "Digital Well-being",
+            "question": "How much time do you spend on your phone/social media daily?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "time",
+                "scale": [
+                    "0-1 hrs",
+                    "1-2 hrs",
+                    "2-3 hrs",
+                    "3-4 hrs",
+                    "4+ hrs"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q6",
+            "questionNumber": 6,
+            "domain": "Safety",
+            "subdomain": "Home Safety",
+            "question": "Do you feel safe and comfortable at home?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "Yes",
+                    "Prefer not to say",
+                    "No"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "No",
+                "action": "AUTO RED FLAG - HOME SAFETY",
+                "protocol": "Level 1-2"
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q7",
+            "questionNumber": 7,
+            "domain": "Bullying",
+            "question": "Have you experienced any bullying or exclusion this term?",
+            "responseType": "yesno_detailed",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ],
+                "followUp": {
+                    "condition": "Yes",
+                    "question": "What happened?",
+                    "responseType": "text",
+                    "maxLines": 2
+                }
+            },
+            "flagConditions": {
+                "yellow": "Yes",
+                "counselorReview": true
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q8",
+            "questionNumber": 8,
+            "domain": "Academic",
+            "question": "How are you feeling about your progress in your subjects?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "feeling",
+                "scale": [
+                    "Very positive",
+                    "Positive",
+                    "Neutral",
+                    "Concerned",
+                    "Very concerned"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q9",
+            "questionNumber": 9,
+            "domain": "Family",
+            "question": "Is there someone at home you can talk to if you have problems?",
+            "responseType": "yes_no_notsure",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "Yes",
+                    "Not sure",
+                    "No"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q10",
+            "questionNumber": 10,
+            "domain": "Emotional",
+            "question": "Sometimes during the year, students feel like they cannot cope. How have you been feeling?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "coping",
+                "scale": [
+                    "Coping well",
+                    "Coping okay",
+                    "Struggling a bit",
+                    "Struggling quite a bit",
+                    "Struggling a lot"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G7_P3_M3_Q11",
+            "questionNumber": 11,
+            "domain": "Safety",
+            "subdomain": "Self-Harm",
+            "question": "Have you had thoughts of hurting yourself when things feel difficult?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Prefer not to say",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            }
+        }
+    ],
+    "safetyProtocol": {
+        "criticalQuestions": [
+            "Q6",
+            "Q11"
+        ]
+    }
+}

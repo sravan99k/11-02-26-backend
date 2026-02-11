@@ -1,0 +1,21 @@
+{
+    "name": "novo-wellness-backend",
+    "version": "1.0.0",
+    "description": "Novo Wellness Platform - Backend Functions",
+    "main": "functions/lib/index.js",
+    "scripts": {
+        "build": "cd functions && npm run build",
+        "deploy": "firebase deploy --only functions",
+        "serve": "firebase emulators:start",
+        "shell": "firebase functions:shell",
+        "start": "npm run shell",
+        "logs": "firebase functions:log"
+    },
+    "engines": {
+        "node": "20"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "firebase-tools": "^13.0.0"
+    }
+}

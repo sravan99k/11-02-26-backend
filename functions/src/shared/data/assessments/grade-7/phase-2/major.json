@@ -1,0 +1,293 @@
+{
+    "metadata": {
+        "grade": 7,
+        "phase": 2,
+        "assessmentCode": "M2",
+        "assessmentName": "Pre-Exam Stress",
+        "purpose": "Early exam stress, sleep, family pressure, and emotional safety",
+        "timing": "September 10",
+        "estimatedTimeMinutes": 10,
+        "totalQuestions": 10,
+        "domainsCovered": [
+            "Strengths",
+            "Exam Stress",
+            "Sleep",
+            "Friendships",
+            "Family",
+            "Bullying",
+            "Emotional Overwhelm",
+            "Self-Harm (Critical)",
+            "Support"
+        ]
+    },
+    "questions": [
+        {
+            "id": "G7_P2_M2_Q1",
+            "questionNumber": 1,
+            "domain": "Strengths",
+            "question": "I have at least one strength or talent I feel good about.",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "isAnchor": true,
+            "anchorId": "A1"
+        },
+        {
+            "id": "G7_P2_M2_Q3",
+            "questionNumber": 3,
+            "domain": "Exam Stress",
+            "question": "How stressed do you feel about upcoming tests and exams?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "stress_level",
+                "scale": [
+                    "Not at all",
+                    "A little",
+                    "Somewhat",
+                    "Quite a bit",
+                    "Very stressed"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q4",
+            "questionNumber": 4,
+            "domain": "Academic Support",
+            "question": "How supported do you feel by your teachers in preparing for exams?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "support_level",
+                "scale": [
+                    "Very well supported",
+                    "Well supported",
+                    "Somewhat supported",
+                    "A little supported",
+                    "Not at all supported"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q5",
+            "questionNumber": 5,
+            "domain": "Sleep",
+            "question": "How well have you been sleeping despite exam pressure?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "quality",
+                "scale": [
+                    "Very well",
+                    "Well",
+                    "Okay",
+                    "Not well",
+                    "Not well at all"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q6",
+            "questionNumber": 6,
+            "domain": "Social",
+            "question": "How have your friendships been affected by exam stress?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "impact",
+                "scale": [
+                    "Positively affected",
+                    "Slightly positive",
+                    "Neutral",
+                    "Slightly negative",
+                    "Negatively affected"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q7",
+            "questionNumber": 7,
+            "domain": "Family",
+            "question": "How helpful are your parents or family members during exam time?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "helpfulness",
+                "scale": [
+                    "Very helpful",
+                    "Helpful",
+                    "Somewhat helpful",
+                    "A little helpful",
+                    "Not at all helpful"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "culturalNotes": "Examples: parents' expectations about marks"
+        },
+        {
+            "id": "G7_P2_M2_Q8",
+            "questionNumber": 8,
+            "domain": "Bullying",
+            "question": "Has anyone made you feel worse about your exams or studies (for example: taunting, comparing marks, saying you will fail)?",
+            "responseType": "yesno",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Yes"
+                ]
+            },
+            "flagConditions": {
+                "yellow": "Yes",
+                "counselorReview": true
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q9",
+            "questionNumber": 9,
+            "domain": "Emotional",
+            "subdomain": "Overwhelm",
+            "question": "Many students feel overwhelmed during exam time. In the last 2 weeks, how often have you felt overwhelmed?",
+            "responseType": "likert",
+            "responseOptions": {
+                "type": "frequency",
+                "scale": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "values": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": ">=3",
+                "orange": ">=4"
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q10",
+            "questionNumber": 10,
+            "domain": "Safety",
+            "subdomain": "Self-Harm",
+            "question": "Have you had thoughts of hurting yourself when you feel overwhelmed?",
+            "responseType": "yes_no_prefer",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Prefer not to say",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "isCritical": true,
+            "autoRedFlag": true,
+            "flagConditions": {
+                "red": "Yes",
+                "action": "AUTO RED FLAG - Immediate counselor",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            }
+        },
+        {
+            "id": "G7_P2_M2_Q13",
+            "questionNumber": 13,
+            "domain": "Support",
+            "question": "Would you like to speak with the school counselor about stress?",
+            "responseType": "yes_no_notsure",
+            "responseOptions": {
+                "type": "yesno",
+                "options": [
+                    "No",
+                    "Not sure",
+                    "Yes"
+                ],
+                "values": [
+                    0,
+                    2,
+                    4
+                ]
+            },
+            "flagConditions": {
+                "yellow": "Yes"
+            },
+            "culturalNotes": "Actionable feedback for school; counselor request"
+        }
+    ],
+    "safetyProtocol": {
+        "criticalQuestions": [
+            "Q10"
+        ],
+        "autoRedTriggers": [
+            {
+                "questionId": "G7_P2_M2_Q10",
+                "condition": "Yes",
+                "action": "AUTO RED FLAG",
+                "timeline": "1-2 hours",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            }
+        ]
+    }
+}

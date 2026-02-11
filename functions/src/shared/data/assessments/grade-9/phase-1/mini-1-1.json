@@ -1,0 +1,702 @@
+{
+    "metadata": {
+        "grade": 9,
+        "phase": 1,
+        "assessmentCode": "Mini 1.1",
+        "assessmentName": "Early Academic Adjustment & Burnout Check",
+        "purpose": "Monitor Grade 9 transition stress, academic shock, career anxiety, and early burnout signs",
+        "timing": "July 20",
+        "estimatedTimeMinutes": 5,
+        "isAdaptive": true,
+        "targetAudience": "All students - adaptive scenarios based on M1 flags"
+    },
+    "scenarios": [
+        {
+            "scenarioId": "academic_shock_recheck",
+            "scenarioName": "Academic Shock Follow-Up",
+            "triggerCondition": "M1 Q2 ≥4 (Academic shock flagged - workload overwhelming)",
+            "improvementThreshold": "If Q1 + Q3 improve by ≥1 point, adjustment progressing",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_AS_Q1",
+                    "domain": "Academic",
+                    "question": "I am adjusting to the Grade 9 workload better now.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q2"
+                },
+                {
+                    "id": "G9_P1_Mini1.1_AS_Q2",
+                    "domain": "Academic",
+                    "question": "I have developed a study routine that works for me.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_AS_Q3",
+                    "domain": "Burnout",
+                    "question": "I wake up feeling tired, even after sleeping enough hours.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "flagConditions": {
+                        "yellow": ">=3",
+                        "note": "Physical exhaustion indicator"
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_AS_Q4",
+                    "domain": "Academic",
+                    "question": "I can keep up with homework and assignments.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Always",
+                            "Often",
+                            "Sometimes",
+                            "Rarely",
+                            "Never"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "career_anxiety_recheck",
+            "scenarioName": "Career/Stream Anxiety Follow-Up",
+            "triggerCondition": "M1 Q5 ≥3 (Career/stream selection anxiety flagged)",
+            "improvementThreshold": "If Q2 = Yes and Q3 improves, career counseling helping",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_CA_Q1",
+                    "domain": "Career",
+                    "question": "How worried are you about choosing the right stream (Science/Commerce/Arts)?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "stress_level",
+                        "scale": [
+                            "Not worried",
+                            "A little worried",
+                            "Somewhat worried",
+                            "Very worried",
+                            "Extremely worried"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q5",
+                    "flagConditions": {
+                        "yellow": ">=3"
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_CA_Q2",
+                    "domain": "Support",
+                    "question": "Have you talked to a counselor or teacher about stream selection?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_CA_Q3",
+                    "domain": "Family",
+                    "question": "My family and I agree on which stream I should choose.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "culturalNotes": "Family pressure on stream selection very common in Indian context"
+                },
+                {
+                    "id": "G9_P1_Mini1.1_CA_Q4",
+                    "domain": "Self",
+                    "question": "I feel confident about my interests and strengths.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "agreement",
+                        "scale": [
+                            "Strongly Agree",
+                            "Agree",
+                            "Neutral",
+                            "Disagree",
+                            "Strongly Disagree"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "academic_confidence_recheck",
+            "scenarioName": "Academic Confidence Follow-Up",
+            "triggerCondition": "M1 Q4 ≥4 (Struggling to keep up academically)",
+            "improvementThreshold": "If Q1 improves and Q3 = Yes, support is working",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_AC_Q1",
+                    "domain": "Academic",
+                    "question": "I am keeping up with my studies this term.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Always",
+                            "Often",
+                            "Sometimes",
+                            "Rarely",
+                            "Never"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q4"
+                },
+                {
+                    "id": "G9_P1_Mini1.1_AC_Q2",
+                    "domain": "Burnout",
+                    "subdomain": "Cognitive Overload",
+                    "question": "I have trouble concentrating during classes because I feel overwhelmed.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "flagConditions": {
+                        "yellow": ">=3"
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_AC_Q3",
+                    "domain": "Support",
+                    "question": "I am getting extra help for subjects that are difficult.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "sleep_recheck",
+            "scenarioName": "Sleep Quality Follow-Up",
+            "triggerCondition": "M1 Q6 ≥3 (Sleep quality issues flagged)",
+            "improvementThreshold": "If Q1 + Q2 improve, sleep hygiene interventions working",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_SL_Q1",
+                    "domain": "Health",
+                    "question": "How well have you been sleeping in the last week?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "quality",
+                        "scale": [
+                            "Very well",
+                            "Well",
+                            "Okay",
+                            "Not well",
+                            "Not well at all"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q6"
+                },
+                {
+                    "id": "G9_P1_Mini1.1_SL_Q2",
+                    "domain": "Health",
+                    "question": "I am getting at least 8 hours of sleep most nights.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_SL_Q3",
+                    "domain": "Academic",
+                    "question": "Late-night study is affecting my sleep schedule.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            0,
+                            4
+                        ]
+                    },
+                    "flagConditions": {
+                        "yellow": "Yes",
+                        "note": "Academic pressure on sleep"
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "mood_recheck",
+            "scenarioName": "Mood & Depression Screening Follow-Up",
+            "triggerCondition": "M1 Q7 ≥3 (Mood flagged - feeling happy less often)",
+            "improvementThreshold": "If Q1 improves and Q3 = Yes, support helping",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_MO_Q1",
+                    "domain": "Emotional",
+                    "question": "I feel happy most days.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Always",
+                            "Often",
+                            "Sometimes",
+                            "Rarely",
+                            "Never"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "compareToM1": "Q7"
+                },
+                {
+                    "id": "G9_P1_Mini1.1_MO_Q2",
+                    "domain": "Burnout",
+                    "subdomain": "Depersonalization",
+                    "question": "I feel like I'm going through the motions without really caring anymore.",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Never",
+                            "Rarely",
+                            "Sometimes",
+                            "Often",
+                            "Always"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "flagConditions": {
+                        "yellow": ">=3",
+                        "note": "Depersonalization - serious burnout indicator"
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_MO_Q3",
+                    "domain": "Support",
+                    "question": "I have someone I can talk to when I feel down.",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "digital_wellbeing_check",
+            "scenarioName": "Digital Well-being Follow-up",
+            "triggerCondition": "M1 flagged digital concerns",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_DIG_Q1",
+                    "domain": "Digital Well-being",
+                    "question": "Is your screen time affecting your well-being?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Not at all",
+                            "A little",
+                            "Somewhat",
+                            "Quite a bit",
+                            "Very much"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_DIG_Q2",
+                    "domain": "Digital Well-being",
+                    "question": "Are you managing to balance online and offline activities?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "general_stress_check",
+            "scenarioName": "General Stress & Worries Follow-up",
+            "triggerCondition": "M1 indicated ongoing worries",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_GS_Q1",
+                    "domain": "General Stress",
+                    "question": "Are you still feeling worried or stressed?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "frequency",
+                        "scale": [
+                            "Not at all",
+                            "A little",
+                            "Somewhat",
+                            "Quite a bit",
+                            "Very much"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "mood_check",
+            "scenarioName": "Mood Follow-up",
+            "triggerCondition": "M1 flagged mood concerns",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_MOD_Q1",
+                    "domain": "Mood",
+                    "question": "How has your mood been lately?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "level",
+                        "scale": [
+                            "Very good",
+                            "Good",
+                            "Okay",
+                            "Low",
+                            "Very low"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_MOD_Q2",
+                    "domain": "Mood",
+                    "question": "Do you have things that help lift your mood?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "sleep_check",
+            "scenarioName": "Sleep Pattern Follow-up",
+            "triggerCondition": "M1 flagged sleep concerns",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_SL_Q1",
+                    "domain": "Sleep",
+                    "question": "How well have you been sleeping?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "level",
+                        "scale": [
+                            "Very well",
+                            "Well",
+                            "Okay",
+                            "Badly",
+                            "Very badly"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_SL_Q2",
+                    "domain": "Sleep",
+                    "question": "Are you getting at least 7-8 hours of sleep?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "social_check",
+            "scenarioName": "Social Connection Follow-up",
+            "triggerCondition": "M1 flagged social concerns",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_SOC_Q1",
+                    "domain": "Social",
+                    "question": "How are your friendships going?",
+                    "responseType": "likert",
+                    "responseOptions": {
+                        "type": "level",
+                        "scale": [
+                            "Very well",
+                            "Well",
+                            "Okay",
+                            "Not well",
+                            "Very badly"
+                        ],
+                        "values": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_SOC_Q2",
+                    "domain": "Social",
+                    "question": "Do you feel connected to friends?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "scenarioId": "strengths_check",
+            "scenarioName": "Strengths & Self-Concept Follow-up",
+            "triggerCondition": "M1 flagged low self-concept about strengths",
+            "questions": [
+                {
+                    "id": "G9_P1_Mini1.1_STR_Q1",
+                    "domain": "Strengths",
+                    "question": "Can you name at least one thing you're good at?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Not sure",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            2,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "id": "G9_P1_Mini1.1_STR_Q2",
+                    "domain": "Strengths",
+                    "question": "Have you used any of your strengths recently?",
+                    "responseType": "yesno",
+                    "responseOptions": {
+                        "type": "options",
+                        "options": [
+                            "No",
+                            "Yes"
+                        ],
+                        "values": [
+                            4,
+                            0
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "interpretation": {
+        "guide": "Scores ≥4 on any burnout item or average ≥3.5 across scenarios indicate HIGH RISK of early burnout",
+        "action": "Immediate counselor intervention within 48 hours for high risk students"
+    },
+    "culturalNotes": "Grade 9 is critical transition year in Indian education with stream selection pressure, increased academic workload, and early career anxiety. Early burnout detection is essential."
+}

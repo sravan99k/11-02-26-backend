@@ -1,0 +1,230 @@
+{
+    "riskThresholds": {
+        "description": "Apply to all domains consistently across all grades and assessments",
+        "levels": [
+            {
+                "scoreRange": [
+                    1.0,
+                    2.4
+                ],
+                "riskLevel": "Healthy",
+                "colorCode": "Green",
+                "hexColor": "#10B981",
+                "action": "Positive reinforcement + maintenance activities",
+                "timeline": "Continue routine monitoring"
+            },
+            {
+                "scoreRange": [
+                    2.5,
+                    3.4
+                ],
+                "riskLevel": "Moderate",
+                "colorCode": "Yellow",
+                "hexColor": "#F59E0B",
+                "action": "Trigger Mini Assessment in 2 weeks + targeted resources",
+                "timeline": "2-week follow-up"
+            },
+            {
+                "scoreRange": [
+                    3.5,
+                    4.0
+                ],
+                "riskLevel": "High",
+                "colorCode": "Orange",
+                "hexColor": "#F97316",
+                "action": "Schedule counselor check-in + intervention",
+                "timeline": "Within 1 week"
+            },
+            {
+                "scoreRange": [
+                    4.1,
+                    5.0
+                ],
+                "riskLevel": "Critical",
+                "colorCode": "Red",
+                "hexColor": "#EF4444",
+                "action": "Immediate counselor notification + intervention",
+                "timeline": "Same day contact"
+            }
+        ]
+    },
+    "crisisProtocols": [
+        {
+            "level": 1,
+            "name": "IMMEDIATE DANGER",
+            "triggers": [
+                "Self-harm thoughts (Often/Always responses)",
+                "Suicidal ideation (Yes responses)",
+                "Immediate safety threats"
+            ],
+            "responseTime": "1-2 hours",
+            "actions": [
+                "Counselor speaks with student within 30 minutes",
+                "Emergency family contact - request immediate family presence",
+                "Professional referral - psychiatrist/psychologist within 24 hours",
+                "Safety planning - comprehensive plan with 24/7 support contacts",
+                "Academic emergency - temporary suspension if needed for safety",
+                "Intensive monitoring - hourly check-ins, family supervision"
+            ],
+            "colorCode": "Red",
+            "priority": "CRITICAL"
+        },
+        {
+            "level": 2,
+            "name": "HIGH RISK",
+            "triggers": [
+                "Multiple critical flags",
+                "Escalating patterns of distress",
+                "Family breakdown"
+            ],
+            "responseTime": "24 hours",
+            "actions": [
+                "Crisis team activation - Principal, counselor, family, mental health professional within 12 hours",
+                "Immediate intervention - Professional counseling session within 24 hours",
+                "Family crisis intervention - Intensive family therapy and support",
+                "Academic accommodations - Modified schedule if needed",
+                "Medical evaluation - Physical health assessment due to stress symptoms",
+                "Professional support - Daily counselor contact, weekly professional sessions"
+            ],
+            "colorCode": "Orange",
+            "priority": "URGENT"
+        },
+        {
+            "level": 3,
+            "name": "MODERATE RISK",
+            "triggers": [
+                "High scores across multiple domains",
+                "Concerning behavioral changes"
+            ],
+            "responseTime": "48-72 hours",
+            "actions": [
+                "Counselor intervention - Mandatory meeting within 48 hours",
+                "Family conference - Required family meeting to discuss support strategies",
+                "Stress management program - Intensive coping skills training",
+                "Peer support - Connection with support groups or peer mentoring",
+                "Academic support - Tutoring, study skills support, reduced pressure",
+                "Regular monitoring - Twice weekly check-ins, progress tracking"
+            ],
+            "colorCode": "Yellow",
+            "priority": "MODERATE"
+        },
+        {
+            "level": 4,
+            "name": "MILD CONCERN",
+            "triggers": [
+                "Isolated high scores",
+                "Mild stress indicators"
+            ],
+            "responseTime": "1 week",
+            "actions": [
+                "Resource provision - Self-help materials, stress management apps, online resources",
+                "Peer connection - Encourage participation in supportive peer groups",
+                "Parent education - Information about supporting teenagers",
+                "Academic support - Study skills workshops, time management training",
+                "Monitoring - Weekly check-ins for one month"
+            ],
+            "colorCode": "Green",
+            "priority": "LOW"
+        }
+    ],
+    "autoRedTriggers": {
+        "description": "Automatic critical flags that override standard scoring",
+        "triggers": [
+            {
+                "type": "Self-Harm Question",
+                "condition": "Often or Always responses, or any Yes to ideation questions",
+                "action": "AUTO RED FLAG - Immediate counselor",
+                "protocol": "Level 1: IMMEDIATE DANGER"
+            },
+            {
+                "type": "Home Safety",
+                "condition": "No to feeling safe at home",
+                "action": "AUTO RED FLAG - Immediate review",
+                "protocol": "Level 1 or 2 depending on context"
+            },
+            {
+                "type": "Text Analysis Keywords",
+                "keywords": [
+                    "hurt",
+                    "kill",
+                    "die",
+                    "end it",
+                    "useless",
+                    "better off dead",
+                    "suicide",
+                    "can't do this"
+                ],
+                "action": "Flag profile as CRITICAL + SMS/Email alert to Mental Health Lead",
+                "protocol": "Level 1 or 2 depending on severity"
+            },
+            {
+                "type": "Dissociation Indicators",
+                "condition": "Complete emotional shutdown responses",
+                "action": "Immediate professional assessment",
+                "protocol": "Level 2: HIGH RISK"
+            }
+        ]
+    },
+    "annualOutcomeCategories": {
+        "description": "Overall category based on average score across all assessments in academic year",
+        "categories": [
+            {
+                "scoreRange": [
+                    1.0,
+                    1.9
+                ],
+                "category": "Thriving",
+                "studentMessage": "You're a Mental Health Champion!",
+                "recommendedActions": [
+                    "Peer mentorship potential",
+                    "Leadership opportunities",
+                    "Recognition programs"
+                ],
+                "colorCode": "Green"
+            },
+            {
+                "scoreRange": [
+                    2.0,
+                    2.9
+                ],
+                "category": "Balanced",
+                "studentMessage": "You had a solid year with resilience!",
+                "recommendedActions": [
+                    "Standard monitoring",
+                    "Skill-building activities",
+                    "Optional counseling"
+                ],
+                "colorCode": "Yellow"
+            },
+            {
+                "scoreRange": [
+                    3.0,
+                    3.9
+                ],
+                "category": "Vulnerable",
+                "studentMessage": "This was tough but you made it!",
+                "recommendedActions": [
+                    "Mandatory counseling check-in",
+                    "Family involvement",
+                    "Flagged for early check-in next year"
+                ],
+                "colorCode": "Orange"
+            },
+            {
+                "scoreRange": [
+                    4.0,
+                    5.0
+                ],
+                "category": "Critical",
+                "studentMessage": "We're here to support you.",
+                "recommendedActions": [
+                    "Intensive counseling",
+                    "Family therapy",
+                    "Possible clinical referral",
+                    "Continued intensive monitoring next year"
+                ],
+                "colorCode": "Red"
+            }
+        ]
+    }
+}
